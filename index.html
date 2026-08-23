@@ -39,6 +39,21 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Batch Runner for Excel — run hundreds of scenarios and Goal Seek in one click",
+  "description": "A walkthrough of Batch Runner for Microsoft Excel: linking inputs and outputs, running a model across a table of scenarios, and using batch Goal Seek to solve every scenario to its own target.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/JoSK7RkLOto/maxresdefault.jpg",
+  "embedUrl": "https://www.youtube.com/embed/JoSK7RkLOto",
+  "contentUrl": "https://youtu.be/JoSK7RkLOto",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Heureka Tools"
+  }
+}
+</script>
 <style>
 /* Heureka Tools — Precision engineering
    Self-contained stylesheet. No framework. */
@@ -809,6 +824,47 @@ a { color: inherit; text-decoration: none; }
   .card-body { padding: 0 16px; }
   .foot { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- demo video ---------- */
+.demo-video {
+  margin: 56px 0 8px;
+}
+.demo-video .video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(245, 245, 242, 0.14);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+}
+.demo-video .video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.demo-video figcaption {
+  margin-top: 16px;
+  font-size: 14.5px;
+  color: rgba(245, 245, 242, 0.5);
+  text-align: center;
+}
+.demo-video figcaption a {
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 181, 116, 0.35);
+}
+.demo-video figcaption a:hover { border-bottom-color: var(--brand); }
+@media (max-width: 720px) {
+  .demo-video { margin: 40px 0 4px; }
+  .demo-video .video-frame { border-radius: 10px; }
+  .demo-video figcaption { font-size: 13.5px; text-align: left; }
+}
+
 </style>
 </head>
 <body>
@@ -839,6 +895,7 @@ a { color: inherit; text-decoration: none; }
     </a>
     <div class="nav-links">
       <a href="#product">Batch Runner</a>
+      <a href="#product">Demo</a>
       <a href="#tools">Tools</a>
       <a href="#arrives">What you get</a>
       <a href="#questions">Questions</a>
@@ -971,6 +1028,22 @@ a { color: inherit; text-decoration: none; }
       that produced it. One press. Every row calculated, every result recorded, your
       model put back as it was.
     </p>
+
+    <figure class="demo-video">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/JoSK7RkLOto?rel=0&amp;modestbranding=1"
+          title="Batch Runner for Excel — run hundreds of scenarios and Goal Seek in one click"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <figcaption>
+        A full walkthrough on a real model — setup, a batch run, and Goal Seek solving every
+        scenario to its own target. <a href="https://youtu.be/JoSK7RkLOto" target="_blank" rel="noopener">Watch on YouTube</a>
+      </figcaption>
+    </figure>
 
     <div class="steps">
       <article class="step">
@@ -1337,7 +1410,7 @@ a { color: inherit; text-decoration: none; }
 
 <script>
 (function () {
-  var sel = ".hero > div, .panel, .compare, .compare-note, .steps-head, .steps-lead, .step, .specs, .card-tool, .card-next, .cols > div, .closing-inner";
+  var sel = ".hero > div, .panel, .compare, .compare-note, .steps-head, .steps-lead, .demo-video, .step, .specs, .card-tool, .card-next, .cols > div, .closing-inner";
   var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
   if (!nodes.length) return;
   if (!("IntersectionObserver" in window)) return;
