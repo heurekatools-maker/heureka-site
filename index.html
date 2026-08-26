@@ -3,63 +3,64 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Thank you — your download is ready | Heureka Tools</title>
-<meta name="description" content="Your Batch Runner purchase is complete. Download your files and get running in the next ten minutes." />
-<meta name="robots" content="noindex, nofollow" />
-<link rel="canonical" href="https://heurekatools.com/thank-you" />
+<title>Heureka Tools — Batch Runner for Excel, €39 once</title>
+<meta name="description" content="Run your Excel model across hundreds of scenarios in one press, with Goal Seek on every row. Pay once, keep it forever. No subscription, nothing uploaded." />
+<link rel="canonical" href="https://heurekatools.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://heurekatools.com/" />
+<meta property="og:site_name" content="Heureka Tools" />
+<meta property="og:title" content="Heureka Tools — Batch Runner for Excel, €39 once" />
+<meta property="og:description" content="Run your Excel model across hundreds of scenarios in one press, with Goal Seek on every row. Pay once, keep it forever. No subscription, nothing uploaded." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Heureka Tools — Batch Runner for Excel, €39 once" />
+<meta name="twitter:description" content="Run your Excel model across hundreds of scenarios in one press, with Goal Seek on every row. Pay once, keep it forever. No subscription, nothing uploaded." />
 <meta name="theme-color" content="#0f1115" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
-
-<!-- =========================================================
-     GOOGLE ADS CONVERSION TRACKING
-     Replace the two placeholders below with your own IDs:
-       AW-18407667195     e.g. AW-123456789
-       CONVERSION_LABEL     e.g. AbC-D_efGhIjKlMnOp
-     Both are shown in Google Ads under
-       Tools > Conversions > (your action) > Tag setup > Install manually
-     ========================================================= -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18407667195"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18407667195');
 </script>
-<script>
-  // Fires once when this page loads, i.e. after a completed purchase.
-  (function () {
-    var params = new URLSearchParams(window.location.search);
-
-    // Lemon Squeezy appends order details to the redirect URL.
-    // Reading them lets you report the real value instead of a fixed one.
-    var orderId = params.get('order_id') || params.get('order') || '';
-    var total   = parseFloat(params.get('total') || params.get('order_total') || '') ;
-    var currency = params.get('currency') || 'EUR';
-
-    // Lemon Squeezy sends totals in cents on some fields — guard against that.
-    if (!isNaN(total) && total > 1000) { total = total / 100; }
-    if (isNaN(total)) { total = 39.00; }   // fallback to list price
-
-    gtag('event', 'conversion', {
-      send_to: 'AW-18407667195/LKX-CJK6uOgcEPvruslE',
-      value: total,
-      currency: currency,
-      transaction_id: orderId          // prevents duplicate counting on refresh
-    });
-
-    // Show the order reference on the page if we have one.
-    if (orderId) {
-      document.addEventListener('DOMContentLoaded', function () {
-        var el = document.getElementById('orderRef');
-        if (el) {
-          el.textContent = 'Order reference · ' + orderId;
-          el.style.display = 'inline-block';
-        }
-      });
-    }
-  })();
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Batch Runner for Microsoft Excel",
+  "brand": {
+    "@type": "Brand",
+    "name": "Heureka Tools"
+  },
+  "description": "Run your model across hundreds of input scenarios in one press, and collect every output beside the inputs that produced it — including a Goal Seek solve on every row.",
+  "operatingSystem": "Windows, Microsoft Excel 2016 or newer",
+  "applicationCategory": "BusinessApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "39",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://heurekatools.com/#tools"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Batch Runner for Excel — run hundreds of scenarios and Goal Seek in one click",
+  "description": "A walkthrough of Batch Runner for Microsoft Excel: linking inputs and outputs, running a model across a table of scenarios, and using batch Goal Seek to solve every scenario to its own target.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/JoSK7RkLOto/maxresdefault.jpg",
+  "embedUrl": "https://www.youtube.com/embed/JoSK7RkLOto",
+  "contentUrl": "https://youtu.be/JoSK7RkLOto",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Heureka Tools"
+  }
+}
 </script>
 <style>
 /* Heureka Tools — Precision engineering
@@ -832,104 +833,52 @@ a { color: inherit; text-decoration: none; }
   .foot { flex-direction: column; align-items: flex-start; }
 }
 
-/* ---------- thank-you page ---------- */
-.ty { padding: 84px 0 96px; }
-.ty-inner { max-width: 880px; margin: 0 auto; }
-.ty-mark {
-  width: 74px; height: 74px; margin: 0 auto 30px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  background: rgba(31, 181, 116, 0.12);
-  color: var(--brand-deep);
+/* ---------- demo video ---------- */
+.demo-video {
+  margin: 56px 0 8px;
 }
-.ty-mark svg { width: 34px; height: 34px; }
-.ty-head { text-align: center; margin-bottom: 56px; }
-.ty-head h1 { font-size: clamp(38px, 4.8vw, 60px); margin-bottom: 18px; }
-.ty-head p { color: var(--carbon-50); font-size: 18px; max-width: 52ch; margin: 0 auto; }
-.ty-order {
-  display: inline-block; margin-top: 20px;
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em;
-  color: var(--carbon-40); background: var(--surface);
-  border: 1px solid var(--carbon-05); border-radius: 999px; padding: 7px 16px;
+.demo-video .video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(245, 245, 242, 0.14);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
 }
-
-.ty-steps {
-  border: 1px solid var(--carbon-10);
-  border-radius: 26px; overflow: hidden; background: var(--white);
+.demo-video .video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
-.ty-step {
-  display: grid; grid-template-columns: 74px 1fr; gap: 24px;
-  padding: 30px 34px; border-top: 1px solid var(--carbon-05);
-  align-items: start;
+.demo-video figcaption {
+  margin-top: 16px;
+  font-size: 14.5px;
+  color: rgba(245, 245, 242, 0.5);
+  text-align: center;
 }
-.ty-step:first-child { border-top: 0; }
-.ty-step .n {
-  font-family: var(--display); font-size: 34px; font-weight: 700;
-  color: var(--brand); line-height: 1; letter-spacing: -0.03em;
+.demo-video figcaption a {
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 181, 116, 0.35);
 }
-.ty-step h3 { font-size: 19px; margin-bottom: 8px; }
-.ty-step p { color: var(--carbon-60); font-size: 15px; line-height: 1.6; }
-.ty-step p + p { margin-top: 10px; }
-.ty-step b { color: var(--carbon); font-weight: 700; }
-.ty-step code {
-  font-family: var(--mono); font-size: 13px;
-  background: var(--carbon-05); padding: 2px 6px; border-radius: 4px;
-}
-
-.ty-warn {
-  margin-top: 30px; display: grid; grid-template-columns: 44px 1fr; gap: 18px;
-  background: #fff8ec; border: 1px solid #f2dcb4;
-  border-radius: 18px; padding: 24px 28px;
-}
-.ty-warn .ico { color: #b5842f; }
-.ty-warn .ico svg { width: 26px; height: 26px; }
-.ty-warn h3 { font-size: 17px; margin-bottom: 8px; color: #8a6420; }
-.ty-warn p { font-size: 14.5px; color: #6f5320; line-height: 1.6; }
-.ty-warn p + p { margin-top: 8px; }
-.ty-warn b { font-weight: 700; }
-
-.ty-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 30px; }
-.ty-card {
-  background: var(--surface); border: 1px solid var(--carbon-05);
-  border-radius: 20px; padding: 30px 30px 28px;
-  display: flex; flex-direction: column;
-}
-.ty-card .kicker { margin-bottom: 12px; display: block; }
-.ty-card h3 { font-size: 20px; margin-bottom: 10px; }
-.ty-card p { font-size: 14.5px; color: var(--carbon-60); line-height: 1.6; margin-bottom: 20px; }
-.ty-card .btn { margin-top: auto; align-self: flex-start; }
-.ty-card.dark { background: var(--carbon); color: var(--paper); border-color: transparent; }
-.ty-card.dark h3 { color: var(--paper); }
-.ty-card.dark p { color: rgba(245, 245, 242, 0.55); }
-.ty-card.dark .kicker { color: var(--brand); }
-
-.ty-mail {
-  margin-top: 30px; text-align: center;
-  background: var(--white); border: 1px solid var(--carbon-05);
-  border-radius: 22px; padding: 34px 30px;
-  box-shadow: 0 18px 50px rgba(15, 17, 21, 0.06);
-}
-.ty-mail p { color: var(--carbon-50); font-size: 15px; line-height: 1.6; max-width: 52ch; margin: 0 auto; }
-.ty-mail .contact-email { margin: 14px 0 6px; }
-
-@media (max-width: 860px) {
-  .ty-cards { grid-template-columns: 1fr; }
-}
-@media (max-width: 680px) {
-  .ty { padding: 56px 0 72px; }
-  .ty-step { grid-template-columns: 52px 1fr; gap: 16px; padding: 24px 22px; }
-  .ty-step .n { font-size: 27px; }
-  .ty-warn { padding: 20px 22px; grid-template-columns: 34px 1fr; gap: 14px; }
-  .ty-mail { padding: 28px 22px; }
+.demo-video figcaption a:hover { border-bottom-color: var(--brand); }
+@media (max-width: 720px) {
+  .demo-video { margin: 40px 0 4px; }
+  .demo-video .video-frame { border-radius: 10px; }
+  .demo-video figcaption { font-size: 13.5px; text-align: left; }
 }
 
 </style>
 </head>
 <body>
-
 <nav class="nav">
   <div class="wrap nav-inner">
-    <a class="logo" href="/" aria-label="Heureka Tools — smart tools, better work">
+    <a class="logo" href="#top" aria-label="Heureka Tools — smart tools, better work">
       <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
         <defs>
           <linearGradient id="ht-g" x1="0" y1="6" x2="34" y2="34" gradientUnits="userSpaceOnUse">
@@ -953,150 +902,602 @@ a { color: inherit; text-decoration: none; }
       <span class="logo-word"><span>heureka</span><em>tools</em></span>
     </a>
     <div class="nav-links">
-      <a href="/#product">Batch Runner</a>
-      <a href="/#tools">Tools</a>
-      <a href="/#questions">Questions</a>
-      <a class="btn btn-pill" href="mailto:hello@heurekatools.com">Get help</a>
+      <a href="#product">Batch Runner</a>
+      <a href="#product">Demo</a>
+      <a href="#tools">Tools</a>
+      <a href="#arrives">What you get</a>
+      <a href="#questions">Questions</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-pill" href="#tools">Browse tools</a>
     </div>
   </div>
 </nav>
 
-<main class="section ty">
-  <div class="wrap ty-inner">
-
-    <div class="ty-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 6 9 17l-5-5"></path>
-      </svg>
+<header class="wrap hero" id="top">
+  <div>
+    <span class="badge">Smart tools. Better work.</span>
+    <h1>Work you do a hundred times. <span class="dim">Pressed once.</span></h1>
+    <p class="hero-lead">
+      Small, sharp tools for spreadsheet analysis, document generation and contract
+      drafting. <strong>Buy one, keep it forever</strong> — no seat count, no renewal,
+      no expiring licence.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-brand" href="#tools">See the tools — €39</a>
+      <a class="btn btn-ghost" href="#arrives">What's in the box</a>
     </div>
+    <p class="hero-meta">One payment · No subscription · <b>Runs on your own machine</b></p>
+  </div>
 
-    <div class="ty-head">
-      <span class="kicker">Purchase complete</span>
-      <h1>Thank you. Your download is ready.</h1>
+  <div class="hero-visual">
+    <div class="panel">
+      <div class="panel-head">
+        <span>Batch Runner · Scenario grid</span>
+        <span class="chip-live"><span class="dot"></span>Running</span>
+      </div>
+      <table class="grid-table">
+        <thead>
+          <tr>
+            <th scope="col">Scenario</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Exit</th>
+            <th scope="col">IRR</th>
+            <th scope="col">DSCR</th>
+            <th scope="col">Max bid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="active">
+            <td>Base</td><td>5.2%</td><td>4.5%</td><td>11.4%</td><td>1.41</td><td class="done">4,391,270</td>
+          </tr>
+          <tr><td>Rates +100bp</td><td>6.2%</td><td>4.5%</td><td>9.6%</td><td>1.22</td><td class="done">3,908,004</td></tr>
+          <tr><td>Rates −100bp</td><td>4.2%</td><td>4.5%</td><td>13.7%</td><td>1.63</td><td class="done">4,902,118</td></tr>
+          <tr><td>Yield soft</td><td>5.2%</td><td>5.0%</td><td>8.7%</td><td>1.28</td><td class="done">3,714,900</td></tr>
+          <tr><td>Yield firm</td><td>5.2%</td><td>4.0%</td><td>14.2%</td><td>1.62</td><td class="done">5,050,431</td></tr>
+          <tr><td>Recession</td><td>6.5%</td><td>5.5%</td><td>5.9%</td><td>1.13</td><td class="done">3,102,760</td></tr>
+          <tr><td>Soft landing</td><td>5.5%</td><td>5.0%</td><td>9.1%</td><td>1.31</td><td class="pend">—</td></tr>
+          <tr><td>Rent boom</td><td>5.2%</td><td>4.5%</td><td>—</td><td>—</td><td class="pend">pending</td></tr>
+        </tbody>
+      </table>
+      <div class="progress">
+        <span class="bar"><span></span></span>
+        <span>Scenario 5 of 8</span>
+      </div>
+    </div>
+    <div class="stat-float">
+      <div class="n">30 × 30</div>
+      <div class="l">Inputs &amp; outputs per run</div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap strip-inner">
+    <span>Built for <b>Microsoft Excel</b></span>
+    <span>Works on <b>your</b> files — nothing uploaded</span>
+    <span>Written manual with <b>every</b> tool</span>
+    <span>No account, no <b>sign-up</b></span>
+  </div>
+</div>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="kicker">The pricing</span>
+      <h2>Software you own, not software you rent.</h2>
       <p>
-        Your receipt and download link are on their way to the email address you used at
-        checkout. If it has not arrived in a couple of minutes, check your spam folder.
+        Most tools now bill monthly for work you do occasionally. A tool you use twice a
+        quarter should not appear on your card twelve times a year.
       </p>
-      <span class="ty-order" id="orderRef" style="display:none"></span>
     </div>
 
-    <div class="ty-steps">
-      <div class="ty-step">
-        <div class="n">01</div>
+    <div class="compare">
+      <div class="compare-col rent">
+        <h3>The usual way</h3>
+        <p class="sub">€19 / month</p>
+        <table class="ledger">
+          <tbody>
+            <tr><td>Year one</td><td>€228</td></tr>
+            <tr><td>Year three</td><td>€684</td></tr>
+            <tr><td>Year five</td><td>€1,140</td></tr>
+            <tr><td>If you stop</td><td>access ends</td></tr>
+          </tbody>
+        </table>
+        <div class="compare-price">€19 / month, forever</div>
+      </div>
+      <div class="compare-col own">
+        <span class="ribbon">HEUREKA TOOLS</span>
+        <h3>Heureka Tools</h3>
+        <p class="sub">€39 once</p>
+        <table class="ledger">
+          <tbody>
+            <tr><td>Year one</td><td>€39</td></tr>
+            <tr><td>Year three</td><td>€0</td></tr>
+            <tr><td>Year five</td><td>€0</td></tr>
+            <tr><td>If we vanish</td><td>it still runs</td></tr>
+          </tbody>
+        </table>
+        <div class="compare-price">€39 once</div>
+      </div>
+    </div>
+    <p class="compare-note">
+      Yours from the moment you download it. Keep using it in ten years, on any machine you own.
+    </p>
+  </div>
+</section>
+
+<section class="section section-dark" id="product">
+  <div class="wrap">
+    <span class="kicker">Inside the first tool</span>
+    <h2 class="steps-head">What Batch Runner actually does.</h2>
+    <p class="steps-lead">
+      Excel changes one input and shows you one answer. Batch Runner runs your whole
+      scenario table through the model and lays every result out beside the assumptions
+      that produced it. One press. Every row calculated, every result recorded, your
+      model put back as it was.
+    </p>
+
+    <figure class="demo-video">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/JoSK7RkLOto?rel=0&amp;modestbranding=1"
+          title="Batch Runner for Excel — run hundreds of scenarios and Goal Seek in one click"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <figcaption>
+        A full walkthrough on a real model — setup, a batch run, and Goal Seek solving every
+        scenario to its own target. <a href="https://youtu.be/JoSK7RkLOto" target="_blank" rel="noopener">Watch on YouTube</a>
+      </figcaption>
+    </figure>
+
+    <div class="steps">
+      <article class="step">
+        <div class="step-n">01</div>
         <div>
-          <h3>Download your three files</h3>
+          <h3>Point at the inputs you want changed</h3>
           <p>
-            The download contains the tool itself (<code>.xlsm</code>), the written user
-            manual, and a demo model. Save all three somewhere you will find them again.
+            On the control sheet, link to each cell in your model that Batch Runner should
+            drive — type <b>=</b>, click the cell, press Enter. That is the whole setup.
+            Nothing inside your model is edited or rebuilt.
           </p>
         </div>
-      </div>
+        <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Control sheet</div>
+            <table>
+              <tbody>
+                <tr><td class="k">Input 1</td><td class="ref">='Model'!$C$5</td></tr>
+                <tr><td class="k">Input 2</td><td class="ref">='Model'!$C$8</td></tr>
+                <tr><td class="k">Input 3</td><td class="ref">='Model'!$C$12</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">… as many as you need · your model untouched</div>
+          </div>
+        </div>
+      </article>
 
-      <div class="ty-step">
-        <div class="n">02</div>
+      <article class="step">
+        <div class="step-n">02</div>
         <div>
-          <h3>Open the demo model first</h3>
+          <h3>Point at the outputs you want read</h3>
           <p>
-            Before pointing it at anything of your own, open the demo model and press run.
-            It executes a full set of scenarios on a working model, so you can see exactly
-            what the tool does in about a minute. It teaches more than the manual.
+            The same way, link to the results you care about — IRR, margin, headroom,
+            whatever your model produces. Every link is checked before anything runs, and a
+            broken one is flagged with the reason rather than silently ignored.
           </p>
         </div>
-      </div>
+        <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Control sheet · link check</div>
+            <table>
+              <tbody>
+                <tr><td class="k">Output 1</td><td class="ref">='Model'!$B$41</td><td class="num done" style="color:#1fb574">YES</td></tr>
+                <tr><td class="k">Output 2</td><td class="ref">='Model'!$B$42</td><td class="num" style="color:#1fb574">YES</td></tr>
+                <tr><td class="k">Output 3</td><td class="ref">='Mdel'!$B$43</td><td class="num no">NO — sheet</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">broken links are named, never skipped</div>
+          </div>
+        </div>
+      </article>
 
-      <div class="ty-step">
-        <div class="n">03</div>
+      <article class="step">
+        <div class="step-n">03</div>
         <div>
-          <h3>Read sections 2 and 4 of the manual</h3>
+          <h3>Write your scenarios</h3>
           <p>
-            Section 2 covers the handful of rules that keep the tool working — the most
-            important being <b>save your workbook before every run</b>. Section 4 explains
-            the control sheet layout. That is the only setup there is.
+            One row per case, as many as you like. Fill in only the inputs that change from
+            one scenario to the next — anything you leave blank simply keeps whatever your
+            model already has.
           </p>
         </div>
+        <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Scenarios</div>
+            <table>
+              <tbody>
+                <tr><td class="k">Input 1</td><td class="num">Input 2</td><td class="num">Input 3</td></tr>
+                <tr><td>27 000</td><td class="num">5.2%</td><td class="num">4.5%</td></tr>
+                <tr><td>25 000</td><td class="num">6.0%</td><td class="num">5.0%</td></tr>
+                <tr><td>27 000</td><td class="num">6.5%</td><td class="num blank">blank</td></tr>
+                <tr><td>31 000</td><td class="num">5.2%</td><td class="num">4.0%</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">blank = your model's own value · unlimited rows</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-n">04</div>
+        <div>
+          <h3>Choose how the run works</h3>
+          <p>
+            Two options, and Goal Seek is entirely optional. <b>Read the outputs.</b> The
+            model calculates on your inputs and the results are recorded. This is the normal
+            mode.
+          </p>
+          <p>
+            <b>Or solve for a target.</b> Turn Goal Seek on, nominate one output as the
+            target and one input as the variable to move, and give each scenario its own
+            goal. Batch Runner works out what that input has to be, then records the outputs
+            as usual.
+          </p>
+        </div>
+        <div class="step-diagram">
+          <div class="cells-split">
+            <div class="cells">
+              <div class="cells-title">Option · read the outputs</div>
+              <table>
+                <tbody>
+                  <tr><td>your inputs</td></tr>
+                  <tr><td>model calculates</td></tr>
+                  <tr><td class="ref">outputs recorded</td></tr>
+                </tbody>
+              </table>
+              <div class="foot">the normal mode</div>
+            </div>
+            <div class="cells">
+              <div class="cells-title">Option · solve for a target</div>
+              <table>
+                <tbody>
+                  <tr><td>your inputs + a goal</td></tr>
+                  <tr><td>input moved until it hits</td></tr>
+                  <tr><td class="ref">outputs recorded</td></tr>
+                </tbody>
+              </table>
+              <div class="foot">each scenario gets its own goal</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-n">05</div>
+        <div>
+          <h3>Press run and read the table</h3>
+          <p>
+            Batch Runner works through the scenarios in turn, telling you which one it is
+            on. Results land beside the inputs that produced them, so the finished block
+            sorts, filters and charts like any other range. When the run ends, your model's
+            original inputs are put back.
+          </p>
+        </div>
+        <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Run · scenario 4 of 4 · finished</div>
+            <table>
+              <tbody>
+                <tr><td class="k">27 000 · 5.2%</td><td class="num ref">11.4%</td><td class="num">2.60x</td><td class="num">1.41</td></tr>
+                <tr><td class="k">25 000 · 6.0%</td><td class="num ref">5.9%</td><td class="num">1.92x</td><td class="num">1.13</td></tr>
+                <tr><td class="k">27 000 · 6.5%</td><td class="num ref">8.7%</td><td class="num">2.31x</td><td class="num">1.28</td></tr>
+                <tr><td class="k">31 000 · 5.2%</td><td class="num ref">14.2%</td><td class="num">3.24x</td><td class="num">1.62</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">results sit on the same row as their inputs</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="specs">
+      <div class="spec"><div class="n">30 × 30</div><div class="l">Inputs and outputs per run</div></div>
+      <div class="spec"><div class="n">∞</div><div class="l">Scenario rows, one press</div></div>
+      <div class="spec"><div class="n">Every row</div><div class="l">Gets its own Goal Seek target</div></div>
+      <div class="spec"><div class="n">Zero</div><div class="l">Changes to your model</div></div>
+      <div class="spec"><div class="n">Checked</div><div class="l">Every link, before it runs</div></div>
+      <div class="spec"><div class="n">No code</div><div class="l">Just links between cells</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="kicker">The catalogue</span>
+      <h2>One tool today. More on the way.</h2>
+      <p>
+        Nothing here is a suite. Every tool does one job that people currently do by hand,
+        over and over, and get wrong under time pressure. Buy only the one you need.
+      </p>
+    </div>
+
+    <div class="catalogue">
+      <article class="card-tool">
+        <div class="card-preview">
+          <div class="cap"><span>01 — Spreadsheets · Excel</span><span>Batch Runner</span></div>
+          <table class="mini">
+            <tbody>
+              <tr><td>Scenario</td><td>Rate</td><td>IRR</td><td>DSCR</td><td>State</td></tr>
+              <tr><td>Base</td><td>5.2%</td><td>11.4%</td><td>1.41</td><td class="ok">Done</td></tr>
+              <tr><td>Rates +100bp</td><td>6.2%</td><td>9.6%</td><td>1.22</td><td class="ok">Done</td></tr>
+              <tr><td>Recession</td><td>6.5%</td><td>5.9%</td><td>1.13</td><td class="ok">Done</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-body">
+          <div class="card-eyebrow">Available now · for Microsoft Excel</div>
+          <h3>Batch Runner</h3>
+          <p>
+            Run your model across hundreds of input scenarios in one press, and collect
+            every output beside the inputs that produced it — including a Goal Seek solve on
+            every row.
+          </p>
+          <ul class="feature-list">
+            <li><span class="tick">✓</span>Unlimited scenarios, up to 30 inputs and 30 outputs</li>
+            <li><span class="tick">✓</span>Batch Goal Seek — solve every row to its own target</li>
+            <li><span class="tick">✓</span>Puts your model's original inputs back when the run ends</li>
+            <li><span class="tick">✓</span>Links checked before the run, with the reason when one fails</li>
+          </ul>
+          <div class="price-row">
+            <span class="p">€39</span>
+            <span class="u">Pay once</span>
+          </div>
+          <a class="btn btn-brand btn-block lemonsqueezy-button" href="https://heurekatools.lemonsqueezy.com/checkout/buy/0246271d-7144-4152-aeb7-11a084819f6d?embed=1&amp;media=0&amp;logo=0&amp;desc=0&amp;discount=0">Buy Batch Runner</a>
+        </div>
+      </article>
+
+      <article class="card-next">
+        <div class="rule"></div>
+        <div class="card-eyebrow" style="color:#1fb574">Next · in build</div>
+        <h3>More tools are coming</h3>
+        <p>
+          Spreadsheets · documents · contracts. Each one removes a different repetitive
+          afternoon. Currently on the bench:
+        </p>
+        <ul class="next-list">
+          <li><b>Batch Runner for Google Sheets</b>the same tool without the Windows requirement</li>
+          <li><b>Contract Forge</b>one template plus a data table into hundreds of finished contracts</li>
+          <li><b>Document Merge</b>bulk-generate reports and letters from a spreadsheet</li>
+        </ul>
+        <a class="link-brand" href="mailto:hello@heurekatools.com?subject=Tool%20request">
+          Tell me which and it moves up the queue →
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-surface section-line" id="arrives">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="kicker">What arrives</span>
+      <h2>A tool, and everything needed to actually use it.</h2>
+      <p>
+        The download is not a bare file with a hopeful README. Most people are running their
+        own model within twenty minutes.
+      </p>
+    </div>
+
+    <div class="cols">
+      <div>
+        <h3>Inside the download</h3>
+        <ul class="box-list">
+          <li><b>01 · The tool</b>Ready to run. Drop it into your own file, or work in the one provided.</li>
+          <li><b>02 · A real manual</b>Setup, layout, worked examples and a troubleshooting table. Written, not generated.</li>
+          <li><b>03 · A demo model</b>A complete worked example you can run in the first minute to see how it behaves.</li>
+          <li><b>04 · Direct support</b>Reply to your receipt and it reaches the person who built it. Not a queue.</li>
+        </ul>
       </div>
 
-      <div class="ty-step">
-        <div class="n">04</div>
-        <div>
-          <h3>Wire it to your own model</h3>
-          <p>
-            Start small — two or three inputs and a handful of scenario rows. Confirm the
-            numbers look right, then expand. It is far easier to spot a mis-pointed link on
-            a short run than a full sheet.
-          </p>
+      <div class="col-faq" id="questions">
+        <h3>Straight answers</h3>
+        <div class="faq">
+          <details>
+            <summary>Does "pay once" really mean forever?<span class="pm">+</span></summary>
+            <p>
+              Yes. One payment, and the tool is yours on any machine you own, for as long as
+              you keep the file. There is no subscription, no licence to renew and no account
+              that can expire. If a future version is a genuinely new product, it will be
+              priced as one — and the version you bought will keep working regardless.
+            </p>
+          </details>
+          <details>
+            <summary>Will it work with my model?<span class="pm">+</span></summary>
+            <p>
+              Batch Runner attaches to any model by pointing at cells you choose — you link
+              inputs and outputs with ordinary formulas, so nothing inside your model has to
+              change. It does not care how your model is built, only which cells you want
+              driven and which you want read. If you are unsure it fits your file, email
+              hello@heurekatools.com before buying and you will get an honest answer.
+            </p>
+          </details>
+          <details>
+            <summary>Do my files leave my computer?<span class="pm">+</span></summary>
+            <p>
+              No. Batch Runner runs inside Excel on your own machine, on your own data.
+              Nothing is uploaded, nothing is sent anywhere, and there is no account to create.
+            </p>
+          </details>
+          <details>
+            <summary>What are the system requirements?<span class="pm">+</span></summary>
+            <p>
+              Batch Runner needs desktop Excel on Windows (2016 or newer) and the file must
+              stay macro-enabled (.xlsm). It is not supported on Excel for Mac, Excel on the
+              web, or the mobile apps. If you work on a Mac, do not buy it yet — a version for
+              Google Sheets is in build.
+            </p>
+          </details>
+          <details>
+            <summary>What if I get stuck?<span class="pm">+</span></summary>
+            <p>
+              Email hello@heurekatools.com and describe what you are seeing. Questions come to
+              the person who built the tool, so you get a real answer rather than a template —
+              and if something turns out to be a genuine bug, it tends to end up fixed in the
+              next version.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use it at work, or for client projects?<span class="pm">+</span></summary>
+            <p>
+              Yes. A single purchase covers one person, including commercial and client work.
+              If several people at your company need it, there is a team licence — just get in
+              touch.
+            </p>
+          </details>
         </div>
       </div>
     </div>
 
-    <div class="ty-warn">
-      <div class="ico" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 9v4"></path><path d="M12 17h.01"></path>
-          <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"></path>
+    <div class="buyers-row">
+      <h3>Who buys these</h3>
+        <div class="buyers">
+          <div class="buyer">
+            <h4>Analysts &amp; modellers</h4>
+            <p>You already build the model. You just need to see it under two hundred sets of assumptions before Thursday.</p>
+          </div>
+          <div class="buyer">
+            <h4>Lawyers &amp; contract teams</h4>
+            <p>The template is agreed. What remains is producing ninety versions of it without a single wrong name or date.</p>
+          </div>
+          <div class="buyer">
+            <h4>Consultants &amp; finance leads</h4>
+            <p>You need the answer, the sensitivity around it, and the paper trail — today, not after a procurement cycle.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<footer class="closing" id="contact">
+  <div class="wrap closing-inner">
+    <span class="kicker">Get in touch</span>
+    <h2>Stop doing it by hand.</h2>
+    <p>Pick the tool that matches the afternoon you keep losing.</p>
+    <a class="btn btn-brand" href="#tools">Browse the tools — €39 once</a>
+    <div class="contact-card">
+      <div class="contact-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+          <path d="m2 7 8.5 6.5a2 2 0 0 0 2.5 0L22 7"></path>
         </svg>
       </div>
-      <div>
-        <h3>Two things to know before your first run</h3>
-        <p>
-          <b>Keep the file macro-enabled.</b> Excel will show a security bar the first time
-          you open it — click <b>Enable Content</b>. If you ever save it as
-          <code>.xlsx</code>, the tool is silently stripped out.
-        </p>
-        <p>
-          <b>Save before every run.</b> If anything goes wrong mid-run, close the file
-          without saving and reopen it. You are then back exactly where you started — but
-          only if you saved first.
-        </p>
-      </div>
-    </div>
-
-    <div class="ty-cards">
-      <div class="ty-card dark">
-        <span class="kicker">Watch it work</span>
-        <h3>The full walkthrough</h3>
-        <p>
-          Setup, a batch run across a real model, and Goal Seek solving every scenario to
-          its own target. Worth ten minutes before you start.
-        </p>
-        <a class="btn btn-brand" href="https://youtu.be/JoSK7RkLOto" target="_blank" rel="noopener">Watch the demo</a>
-      </div>
-
-      <div class="ty-card">
-        <span class="kicker">If something is missing</span>
-        <h3>No email yet?</h3>
-        <p>
-          Check your spam folder first. If it still has not arrived after ten minutes,
-          email us with the address you used at checkout and we will resend it straight
-          away.
-        </p>
-        <a class="btn btn-ghost" href="mailto:hello@heurekatools.com?subject=Missing%20download">Email support</a>
-      </div>
-    </div>
-
-    <div class="ty-mail">
-      <span class="kicker">One more thing</span>
-      <p>
-        If you get stuck, or the tool does not fit your model the way you expected, just
-        say so. Emails come to the person who built it, not a helpdesk.
+      <p class="contact-lead">
+        Feel free to ask us before purchase to make sure the tool works for your use case.
       </p>
       <a class="contact-email" href="mailto:hello@heurekatools.com">hello@heurekatools.com</a>
-      <p style="margin-top:14px">Expect a reply within a working day.</p>
+      <p class="contact-note">
+        Ask whether it fits your model, tell me which tool to build next, or report something
+        that broke. Emails come to the person who built the tools, not a helpdesk — expect a
+        reply within a working day.
+      </p>
     </div>
-
   </div>
-</main>
-
-<footer class="closing" style="padding-top:0;background:transparent;border-top:0">
   <div class="foot">
     <span>© 2026 Heureka Tools · Software you own, not software you rent.</span>
     <span class="foot-links">
-      <a href="/">Home</a>
-      <a href="/#questions">Questions</a>
+      <a href="#product">Batch Runner</a>
+      <a href="#questions">Questions</a>
       <a href="mailto:hello@heurekatools.com">Support</a>
     </span>
   </div>
 </footer>
 
+<script>
+(function () {
+  var sel = ".hero > div, .panel, .compare, .compare-note, .steps-head, .steps-lead, .demo-video, .step, .specs, .card-tool, .card-next, .cols > div, .closing-inner";
+  var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
+  if (!nodes.length) return;
+  if (!("IntersectionObserver" in window)) return;
+  nodes.forEach(function (n) { n.classList.add("reveal"); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
+  nodes.forEach(function (n) { io.observe(n); });
+})();
+</script>
+
+<!-- Lemon Squeezy checkout overlay -->
+<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+<!-- =========================================================
+     Google Ads conversion — fired from the Lemon Squeezy overlay.
+     Because checkout opens in a modal (?embed=1), the buyer may never
+     navigate to /thank-you, so the conversion is reported here instead.
+
+     REPLACE  CONVERSION_LABEL  with the label from
+       Google Ads > Goals > Conversions > (your action) > Tag setup
+     It looks like:  AbC-D_efGhIjKlMnOp
+     ========================================================= -->
+<script>
+(function () {
+  var LABEL = 'LKX-CJK6uOgcEPvruslE';           // <-- replace this
+  var SEND_TO = 'AW-18407667195/' + LABEL;
+  var fired = {};
+
+  function report(data) {
+    data = data || {};
+    var order = data.order || {};
+    var attr  = order.data ? order.data.attributes : {};
+
+    // order identifier — prevents double counting
+    var id = order.data ? String(order.data.id)
+           : (attr.identifier || String(Date.now()));
+    if (fired[id]) return;
+    fired[id] = true;
+
+    // Lemon Squeezy reports totals in cents
+    var value = 39.00;
+    if (attr && typeof attr.total === 'number') value = attr.total / 100;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        send_to: SEND_TO,
+        value: value,
+        currency: (attr && attr.currency) || 'EUR',
+        transaction_id: id
+      });
+    }
+  }
+
+  function wire() {
+    if (!window.LemonSqueezy || !window.LemonSqueezy.Setup) return false;
+    window.LemonSqueezy.Setup({
+      eventHandler: function (event) {
+        if (event && event.event === 'Checkout.Success') {
+          report(event.data);
+        }
+      }
+    });
+    return true;
+  }
+
+  // lemon.js is deferred, so wait for it to exist
+  if (!wire()) {
+    var tries = 0;
+    var poll = setInterval(function () {
+      if (wire() || ++tries > 40) clearInterval(poll);
+    }, 250);
+  }
+})();
+</script>
 </body>
 </html>
