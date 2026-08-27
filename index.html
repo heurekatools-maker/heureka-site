@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Heureka Tools — Batch Runner for Excel, €29 once</title>
+<title>Heureka Tools — Batch Runner for Excel, €39 once</title>
 <meta name="description" content="Run your Excel model across hundreds of scenarios in one press, with Goal Seek on every row. Pay once, keep it forever. No subscription, nothing uploaded." />
 <link rel="canonical" href="https://heurekatools.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://heurekatools.com/" />
 <meta property="og:site_name" content="Heureka Tools" />
-<meta property="og:title" content="Heureka Tools — Batch Runner for Excel, €29 once" />
+<meta property="og:title" content="Heureka Tools — Batch Runner for Excel, €39 once" />
 <meta property="og:description" content="Run your Excel model across hundreds of scenarios in one press, with Goal Seek on every row. Pay once, keep it forever. No subscription, nothing uploaded." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Heureka Tools — Batch Runner for Excel, €29 once" />
+<meta name="twitter:title" content="Heureka Tools — Batch Runner for Excel, €39 once" />
 <meta name="twitter:description" content="Run your Excel model across hundreds of scenarios in one press, with Goal Seek on every row. Pay once, keep it forever. No subscription, nothing uploaded." />
 <meta name="theme-color" content="#0f1115" />
 <!-- Google tag (gtag.js) -->
@@ -40,7 +40,7 @@
   "applicationCategory": "BusinessApplication",
   "offers": {
     "@type": "Offer",
-    "price": "29",
+    "price": "39",
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
     "url": "https://heurekatools.com/#tools"
@@ -923,7 +923,7 @@ a { color: inherit; text-decoration: none; }
       no expiring licence.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-brand" href="#tools">See the tools — €29</a>
+      <a class="btn btn-brand" href="#tools">See the tools — €39</a>
       <a class="btn btn-ghost" href="#arrives">What's in the box</a>
     </div>
     <p class="hero-meta">One payment · No subscription · <b>Runs on your own machine</b></p>
@@ -1008,16 +1008,16 @@ a { color: inherit; text-decoration: none; }
       <div class="compare-col own">
         <span class="ribbon">HEUREKA TOOLS</span>
         <h3>Heureka Tools</h3>
-        <p class="sub">€29 once</p>
+        <p class="sub">€39 once</p>
         <table class="ledger">
           <tbody>
-            <tr><td>Year one</td><td>€29</td></tr>
+            <tr><td>Year one</td><td>€39</td></tr>
             <tr><td>Year three</td><td>€0</td></tr>
             <tr><td>Year five</td><td>€0</td></tr>
             <tr><td>If we vanish</td><td>it still runs</td></tr>
           </tbody>
         </table>
-        <div class="compare-price">€29 once</div>
+        <div class="compare-price">€39 once</div>
       </div>
     </div>
     <p class="compare-note">
@@ -1253,7 +1253,7 @@ a { color: inherit; text-decoration: none; }
             <li><span class="tick">✓</span>Links checked before the run, with the reason when one fails</li>
           </ul>
           <div class="price-row">
-            <span class="p">€29</span>
+            <span class="p">€39</span>
             <span class="u">Pay once</span>
           </div>
           <a class="btn btn-brand btn-block lemonsqueezy-button" href="https://heurekatools.lemonsqueezy.com/checkout/buy/0246271d-7144-4152-aeb7-11a084819f6d?embed=1&amp;media=0&amp;logo=0&amp;desc=0&amp;discount=0">Buy Batch Runner</a>
@@ -1387,7 +1387,7 @@ a { color: inherit; text-decoration: none; }
     <span class="kicker">Get in touch</span>
     <h2>Stop doing it by hand.</h2>
     <p>Pick the tool that matches the afternoon you keep losing.</p>
-    <a class="btn btn-brand" href="#tools">Browse the tools — €29 once</a>
+    <a class="btn btn-brand" href="#tools">Browse the tools — €39 once</a>
     <div class="contact-card">
       <div class="contact-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1439,56 +1439,85 @@ a { color: inherit; text-decoration: none; }
 <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 
 <!-- =========================================================
-     Google Ads conversion — fired from the Lemon Squeezy overlay.
-     Because checkout opens in a modal (?embed=1), the buyer may never
-     navigate to /thank-you, so the conversion is reported here instead.
+     Google Ads conversion tracking via the Lemon Squeezy overlay.
 
-     REPLACE  CONVERSION_LABEL  with the label from
-       Google Ads > Goals > Conversions > (your action) > Tag setup
-     It looks like:  AbC-D_efGhIjKlMnOp
+     Two events are reported:
+       PURCHASE_LABEL  — a completed sale  (primary conversion)
+       CHECKOUT_LABEL  — the Buy button opened checkout (secondary)
+
+     The checkout event exists because a EUR 39 product rarely produces
+     the ~30 sales/month Smart Bidding needs. Checkout opens happen far
+     more often and still signal real intent, so they give Google more
+     to learn from without optimising away from revenue.
+
+     Get each label from:
+       Google Ads > Goals > Conversions > (action) > Tag setup > event snippet
+     A label looks like:  AbC-D_efGhIjKlMnOp
      ========================================================= -->
 <script>
 (function () {
-  var LABEL = 'LKX-CJK6uOgcEPvruslE';           // <-- replace this
-  var SEND_TO = 'AW-18407667195/' + LABEL;
-  var fired = {};
+  var ACCOUNT        = 'AW-18407667195';
+  var PURCHASE_LABEL = 'LKX-CJK6uOgcEPvruslE';   // existing purchase label
+  var CHECKOUT_LABEL = 'A4VqCJ7B2-gcEPvruslE';     // <-- paste the new one here
 
-  function report(data) {
+  var firedPurchase = {};
+  var firedCheckout = false;
+
+  function send(label, params) {
+    // skip while the label is still an un-replaced placeholder
+    if (typeof gtag !== 'function' || !label || label.indexOf('LABEL') !== -1) return;
+    params = params || {};
+    params.send_to = ACCOUNT + '/' + label;
+    gtag('event', 'conversion', params);
+  }
+
+  // ---- a sale completed -------------------------------------------
+  function reportPurchase(data) {
     data = data || {};
     var order = data.order || {};
     var attr  = order.data ? order.data.attributes : {};
 
-    // order identifier — prevents double counting
     var id = order.data ? String(order.data.id)
            : (attr.identifier || String(Date.now()));
-    if (fired[id]) return;
-    fired[id] = true;
+    if (firedPurchase[id]) return;
+    firedPurchase[id] = true;
 
-    // Lemon Squeezy reports totals in cents
-    var value = 29.00;
+    var value = 39.00;                                   // fallback
     if (attr && typeof attr.total === 'number') value = attr.total / 100;
 
-    if (typeof gtag === 'function') {
-      gtag('event', 'conversion', {
-        send_to: SEND_TO,
-        value: value,
-        currency: (attr && attr.currency) || 'EUR',
-        transaction_id: id
-      });
-    }
+    send(PURCHASE_LABEL, {
+      value: value,
+      currency: (attr && attr.currency) || 'EUR',
+      transaction_id: id
+    });
+  }
+
+  // ---- checkout was opened ----------------------------------------
+  // Reported once per page view so repeated opens do not inflate it.
+  function reportCheckoutOpened() {
+    if (firedCheckout) return;
+    firedCheckout = true;
+    send(CHECKOUT_LABEL, { value: 0, currency: 'EUR' });
   }
 
   function wire() {
     if (!window.LemonSqueezy || !window.LemonSqueezy.Setup) return false;
     window.LemonSqueezy.Setup({
       eventHandler: function (event) {
-        if (event && event.event === 'Checkout.Success') {
-          report(event.data);
-        }
+        if (!event || !event.event) return;
+        if (event.event === 'Checkout.Success') reportPurchase(event.data);
+        if (event.event === 'Checkout.Opened')  reportCheckoutOpened();
       }
     });
     return true;
   }
+
+  // Fallback: if the overlay never emits Checkout.Opened, catch the click
+  // on the Buy button itself. firedCheckout stops it double counting.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a.lemonsqueezy-button') : null;
+    if (a) reportCheckoutOpened();
+  }, true);
 
   // lemon.js is deferred, so wait for it to exist
   if (!wire()) {
