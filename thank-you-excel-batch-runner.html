@@ -43,7 +43,7 @@
     if (isNaN(total)) { total = 39.00; }   // fallback to list price
 
     gtag('event', 'conversion', {
-      send_to: 'AW-18407667195/-m_tCOnFo-scEPvruslE',
+      send_to: 'AW-18407667195/CONVERSION_LABEL',
       value: total,
       currency: currency,
       transaction_id: orderId          // prevents duplicate counting on refresh
@@ -984,10 +984,10 @@ a { color: inherit; text-decoration: none; }
       <div class="ty-step">
         <div class="n">01</div>
         <div>
-          <h3>Download your three files</h3>
+          <h3>Download your two files</h3>
           <p>
-            The download contains the tool itself (<code>.xlsm</code>), the written user
-            manual, and a demo model. Save all three somewhere you will find them again.
+            The download contains the tool (<code>.xlsm</code>) and the written user
+            manual (PDF). Save both somewhere you will find them again.
           </p>
         </div>
       </div>
@@ -995,11 +995,12 @@ a { color: inherit; text-decoration: none; }
       <div class="ty-step">
         <div class="n">02</div>
         <div>
-          <h3>Open the demo model first</h3>
+          <h3>Open the .xlsm file and press run</h3>
           <p>
-            Before pointing it at anything of your own, open the demo model and press run.
-            It executes a full set of scenarios on a working model, so you can see exactly
-            what the tool does in about a minute. It teaches more than the manual.
+            The file already contains a working example model with Batch Runner wired to
+            it, so you do not have to set anything up. Press run and it executes a full set
+            of scenarios in front of you — the fastest way to understand both what the tool
+            does and how it attaches to a model. It teaches more than the manual.
           </p>
         </div>
       </div>
