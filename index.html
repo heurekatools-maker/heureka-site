@@ -922,6 +922,66 @@ a { color: inherit; text-decoration: none; }
   .demo-video figcaption { font-size: 13.5px; text-align: left; }
 }
 
+
+/* ---------- what you buy ---------- */
+.buyinfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+@media (max-width: 780px) { .buyinfo { grid-template-columns: 1fr; } }
+.buyinfo-card {
+  background: var(--white);
+  border: 1px solid var(--carbon-05);
+  border-radius: 20px;
+  padding: 28px 30px;
+}
+.buyinfo-card .kicker { display: block; margin-bottom: 10px; }
+.buyinfo-card h3 { font-size: 19px; margin-bottom: 10px; }
+.buyinfo-card p { font-size: 14.5px; color: var(--carbon-60); line-height: 1.6; }
+.buyinfo-card b { color: var(--carbon); font-weight: 700; }
+.buyinfo-card code {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--carbon-05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ---------- legal ---------- */
+.legal-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 860px) { .legal-grid { grid-template-columns: 1fr; gap: 34px; } }
+.legal-block h3 { font-size: 20px; margin-bottom: 18px; }
+.legal-id {
+  font-size: 14.5px;
+  color: var(--carbon-70);
+  line-height: 1.7;
+  background: var(--surface);
+  border: 1px solid var(--carbon-05);
+  border-radius: 16px;
+  padding: 24px 26px;
+}
+.legal-id a { color: var(--brand-deep); }
+.legal-note {
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--carbon-50);
+  line-height: 1.55;
+}
+
+
+/* legal block sits at the very bottom, inside the closing footer */
+.legal-bottom { padding: 72px 0 64px; margin-top: 64px; }
+.legal-bottom .head-center { margin-bottom: 48px; }
+@media (max-width: 680px) { .legal-bottom { padding: 52px 0 44px; margin-top: 44px; } }
 </style>
 </head>
 <body>
@@ -956,6 +1016,7 @@ a { color: inherit; text-decoration: none; }
       <a href="#tools">Tools</a>
       <a href="#arrives">What you get</a>
       <a href="#questions">Questions</a>
+      <a href="#legal">Terms</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-pill" href="#tools">Browse tools</a>
     </div>
@@ -964,7 +1025,7 @@ a { color: inherit; text-decoration: none; }
 
 <header class="wrap hero" id="top">
   <div>
-    <span class="badge">Smart tools. Better work.</span>
+    <span class="badge">Batch Runner · Excel add-in for Windows</span>
     <h1>Work you do a hundred times. <span class="dim">Pressed once.</span></h1>
     <p class="hero-lead">
       Small, sharp tools for spreadsheet analysis, document generation and contract
@@ -975,14 +1036,16 @@ a { color: inherit; text-decoration: none; }
       <a class="btn btn-brand" href="#tools">See the tools — <span class="js-price">€29</span></a>
       <a class="btn btn-ghost" href="#arrives">What's in the box</a>
     </div>
-    <p class="hero-meta">One payment · No subscription · <b>Runs on your own machine</b></p>
+    <p class="hero-meta">
+      Paid download · No free version or trial · <b>Windows &amp; Excel 2016+</b>
+    </p>
   </div>
 
   <div class="hero-visual">
     <div class="panel">
       <div class="panel-head">
         <span>Batch Runner · Scenario grid</span>
-        <span class="chip-live"><span class="dot"></span>Running</span>
+        <span class="chip-live"><span class="dot"></span>Illustration</span>
       </div>
       <table class="grid-table">
         <thead>
@@ -1010,7 +1073,7 @@ a { color: inherit; text-decoration: none; }
       </table>
       <div class="progress">
         <span class="bar"><span></span></span>
-        <span>Scenario 5 of 8</span>
+        <span>Illustrative example &mdash; not live data</span>
       </div>
     </div>
     <div class="stat-float">
@@ -1028,6 +1091,66 @@ a { color: inherit; text-decoration: none; }
     <span>No account, no <b>sign-up</b></span>
   </div>
 </div>
+
+
+<section class="section section-surface" id="what-you-buy">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="kicker">Before you buy</span>
+      <h2>Exactly what you are paying for.</h2>
+      <p>
+        Batch Runner is a paid download. There is no free version, no trial and no
+        free tier. Payment is taken first, then the files are sent to you.
+      </p>
+    </div>
+
+    <div class="buyinfo">
+      <div class="buyinfo-card">
+        <span class="kicker">The product</span>
+        <h3>An Excel add-in with macros</h3>
+        <p>
+          Batch Runner for Microsoft Excel is a macro-enabled Excel workbook
+          (<code>.xlsm</code> file) containing a VBA macro. You drop it into your own
+          workbook, or work in the copy provided. It is not a web app and not a service.
+        </p>
+      </div>
+
+      <div class="buyinfo-card">
+        <span class="kicker">What arrives</span>
+        <h3>Two files, by email</h3>
+        <p>
+          After payment you receive a download link by email containing
+          <b>the tool</b> (<code>Excel_Scenario_Runner.xlsm</code>, approx.&nbsp;190&nbsp;KB)
+          and <b>the user manual</b> (PDF). The .xlsm file contains both Batch Runner and a
+          working example model already wired to it, so the moment you open it you can see
+          how the tool connects to a real Excel model.
+        </p>
+      </div>
+
+      <div class="buyinfo-card">
+        <span class="kicker">System requirements</span>
+        <h3>Windows &amp; Excel 2016 or newer</h3>
+        <p>
+          Requires desktop Microsoft Excel on Windows, version 2016 or newer, and macros
+          must be enabled. <b>Not supported</b> on Excel for Mac, Excel on the web, or the
+          Excel mobile apps. Heureka Tools is independent and not affiliated with,
+          endorsed by, or sponsored by Microsoft.
+        </p>
+      </div>
+
+      <div class="buyinfo-card">
+        <span class="kicker">Payment &amp; price</span>
+        <h3><span class="js-price">€29</span>, paid once</h3>
+        <p>
+          A single payment of <span class="js-price">€29</span> including applicable VAT.
+          No subscription and no recurring charges. Payment is processed by
+          <b>Lemon Squeezy</b>, who act as the reseller of record and issue your invoice.
+          Card and PayPal accepted.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="pricing">
   <div class="wrap">
@@ -1278,7 +1401,7 @@ a { color: inherit; text-decoration: none; }
     <div class="catalogue">
       <article class="card-tool">
         <div class="card-preview">
-          <div class="cap"><span>01 — Spreadsheets · Excel</span><span>Batch Runner</span></div>
+          <div class="cap"><span>01 — Spreadsheets · Excel</span><span>Illustration</span></div>
           <table class="mini">
             <tbody>
               <tr><td>Scenario</td><td>Rate</td><td>IRR</td><td>DSCR</td><td>State</td></tr>
@@ -1335,10 +1458,10 @@ a { color: inherit; text-decoration: none; }
   <div class="wrap">
     <div class="head-center">
       <span class="kicker">What arrives</span>
-      <h2>A tool, and everything needed to actually use it.</h2>
+      <h2>A working example, not a bare file.</h2>
       <p>
-        The download is not a bare file with a hopeful README. Most people are running their
-        own model within twenty minutes.
+        Two files, and the first one already shows you the tool running on a real model.
+        Most people are running their own model within twenty minutes.
       </p>
     </div>
 
@@ -1346,10 +1469,9 @@ a { color: inherit; text-decoration: none; }
       <div>
         <h3>Inside the download</h3>
         <ul class="box-list">
-          <li><b>01 · The tool</b>Ready to run. Drop it into your own file, or work in the one provided.</li>
-          <li><b>02 · A real manual</b>Setup, layout, worked examples and a troubleshooting table. Written, not generated.</li>
-          <li><b>03 · A demo model</b>A complete worked example you can run in the first minute to see how it behaves.</li>
-          <li><b>04 · Direct support</b>Reply to your receipt and it reaches the person who built it. Not a queue.</li>
+          <li><b>01 · The tool, with a model already attached</b>One .xlsm file containing Batch Runner and a complete working example model wired to it. Open it, press run, and watch the whole thing work before you touch anything of your own.</li>
+          <li><b>02 · A real manual</b>Setup, control sheet layout, worked examples and a troubleshooting table. Written, not generated.</li>
+          <li><b>03 · Direct support</b>Reply to your receipt and it reaches the person who built it. Not a queue.</li>
         </ul>
       </div>
 
@@ -1432,6 +1554,8 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
+
+
 <footer class="closing" id="contact">
   <div class="wrap closing-inner">
     <span class="kicker">Get in touch</span>
@@ -1456,10 +1580,107 @@ a { color: inherit; text-decoration: none; }
       </p>
     </div>
   </div>
+<section class="section section-line legal-bottom" id="legal">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="kicker">Legal information</span>
+      <h2>Who you are buying from.</h2>
+      <p>
+        Full seller details, terms and your rights as a consumer. If anything here is
+        unclear, email hello@heurekatools.com before you buy.
+      </p>
+    </div>
+
+    <div class="legal-grid">
+
+      <div class="legal-block">
+        <h3>Seller identity</h3>
+        <p class="legal-id">
+          <b>Ing. Jakub Pavel</b><br />
+          Čapkova 989<br />
+          251 64 Mnichovice<br />
+          Czechia<br /><br />
+          Company ID (IČO): 10940898<br />
+          Email: <a href="mailto:hello@heurekatools.com">hello@heurekatools.com</a><br />
+          Website: heurekatools.com
+        </p>
+        <p class="legal-note">
+          Payments are processed by Lemon Squeezy LLC, who act as reseller of record and
+          issue the invoice for your purchase.
+        </p>
+      </div>
+
+      <div class="legal-block">
+        <h3>Terms of sale</h3>
+        <div class="faq">
+          <details>
+            <summary>What you are buying<span class="pm">+</span></summary>
+            <p>
+              A single-user, perpetual licence to use Batch Runner for Microsoft Excel,
+              delivered as a digital download. The licence covers one person, including
+              commercial and client work. You may install it on any machine you own. You
+              may not resell, redistribute or publish the tool or its source code.
+            </p>
+          </details>
+          <details>
+            <summary>Price, payment and delivery<span class="pm">+</span></summary>
+            <p>
+              The price is <span class="js-price">€29</span>, a one-off payment including
+              applicable VAT. Payment is taken before delivery. Immediately after payment
+              you receive a download link by email. There is no free version, trial or
+              free tier of this product.
+            </p>
+          </details>
+          <details>
+            <summary>Right of withdrawal &amp; refunds<span class="pm">+</span></summary>
+            <p>
+              Under EU consumer law you normally have 14 days to withdraw from a distance
+              contract. For digital content delivered immediately, that right ends once
+              download begins, and by completing checkout you agree to immediate delivery
+              and acknowledge the loss of the withdrawal right.
+            </p>
+            <p>
+              If the tool does not work as described, contact
+              hello@heurekatools.com and we will resolve it or refund you. Refunds are
+              handled through Lemon Squeezy, the reseller of record.
+            </p>
+          </details>
+          <details>
+            <summary>Privacy<span class="pm">+</span></summary>
+            <p>
+              Batch Runner runs entirely inside Excel on your own computer. It collects no
+              data, sends nothing over the internet, and requires no account.
+            </p>
+            <p>
+              This website uses Google Ads conversion measurement and embeds a YouTube
+              video, both of which may set cookies. Your name, email and billing details
+              are collected and processed by Lemon Squeezy for payment and invoicing. To
+              request access to or deletion of your data, email
+              hello@heurekatools.com.
+            </p>
+          </details>
+          <details>
+            <summary>Complaints<span class="pm">+</span></summary>
+            <p>
+              Email hello@heurekatools.com and you will receive a reply within a working
+              day. EU consumers may also use the European Commission's online dispute
+              resolution platform at ec.europa.eu/consumers/odr.
+            </p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   <div class="foot">
-    <span>© 2026 Heureka Tools · Software you own, not software you rent.</span>
+    <span>
+      © 2026 Ing. Jakub Pavel · Čapkova 989, 251 64 Mnichovice, Czechia · IČO 10940898<br />
+      Payments processed by Lemon Squeezy. Not affiliated with Microsoft.
+    </span>
     <span class="foot-links">
-      <a href="#product">Batch Runner</a>
+      <a href="#what-you-buy">What you buy</a>
+      <a href="#legal">Terms &amp; privacy</a>
       <a href="#questions">Questions</a>
       <a href="mailto:hello@heurekatools.com">Support</a>
     </span>
@@ -1468,7 +1689,7 @@ a { color: inherit; text-decoration: none; }
 
 <script>
 (function () {
-  var sel = ".hero > div, .panel, .compare, .compare-note, .steps-head, .steps-lead, .demo-video, .step, .specs, .card-tool, .card-next, .cols > div, .closing-inner";
+  var sel = ".hero > div, .panel, .compare, .compare-note, .steps-head, .steps-lead, .demo-video, .step, .specs, .buyinfo-card, .legal-block, .card-tool, .card-next, .cols > div, .closing-inner";
   var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
   if (!nodes.length) return;
   if (!("IntersectionObserver" in window)) return;
@@ -1507,17 +1728,18 @@ a { color: inherit; text-decoration: none; }
 <script>
 (function () {
   var ACCOUNT        = 'AW-18407667195';
-  var PURCHASE_LABEL = '-m_tCOnFo-scEPvruslE';   // completed sale        (secondary)
-  var CHECKOUT_LABEL = 'uwpOCIGVpOscEPvruslE';     // checkout opened       (primary)
-  var VIDEO_LABEL    = 'RGBzCMLgo-scEPvruslE';        // demo video watched    (secondary)
-  var SCROLL_LABEL   = 'TBD';       // read the walkthrough  (secondary)
+  var PURCHASE_LABEL = '-m_tCOnFo-scEPvruslE';   // completed sale       (secondary)
+  var CHECKOUT_LABEL = 'uwpOCIGVpOscEPvruslE';   // checkout opened      (primary)
+  var VIDEO_LABEL    = 'RGBzCMLgo-scEPvruslE';   // demo video watched   (secondary)
+  var SCROLL_LABEL   = 'TBD';                    // read the walkthrough (secondary)
 
   var firedPurchase = {};
   var firedCheckout = false;
 
   function send(label, params) {
     // skip while the label is still an un-replaced placeholder
-    if (typeof gtag !== 'function' || !label || label.indexOf('LABEL') !== -1) return;
+    if (typeof gtag !== 'function' || !label) return;
+    if (label.indexOf('LABEL') !== -1 || label === 'TBD') return;
     params = params || {};
     params.send_to = ACCOUNT + '/' + label;
     gtag('event', 'conversion', params);
