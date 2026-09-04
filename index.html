@@ -982,6 +982,90 @@ a { color: inherit; text-decoration: none; }
 .legal-bottom { padding: 72px 0 64px; margin-top: 64px; }
 .legal-bottom .head-center { margin-bottom: 48px; }
 @media (max-width: 680px) { .legal-bottom { padding: 52px 0 44px; margin-top: 44px; } }
+
+/* ---------- product section: dark buy-info cards ---------- */
+.buyinfo-dark { max-width: none; margin: 0 0 8px; }
+.buyinfo-dark .buyinfo-card {
+  background: rgba(245, 245, 242, 0.04);
+  border: 1px solid rgba(245, 245, 242, 0.12);
+}
+.buyinfo-dark .buyinfo-card h3 { color: var(--paper); }
+.buyinfo-dark .buyinfo-card p { color: rgba(245, 245, 242, 0.58); }
+.buyinfo-dark .buyinfo-card b { color: var(--paper); }
+.buyinfo-dark .buyinfo-card .kicker { color: var(--brand); }
+.buyinfo-dark .buyinfo-card code {
+  background: rgba(245, 245, 242, 0.1);
+  color: var(--paper);
+}
+
+.steps-sub {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin: 64px 0 8px;
+}
+
+/* ---------- collapsible steps ---------- */
+.step { grid-template-columns: 92px 1fr; align-items: start; }
+.step-body { min-width: 0; }
+.step-short {
+  color: rgba(245, 245, 242, 0.62);
+  font-size: 15.5px;
+  margin-top: 4px;
+  max-width: 62ch;
+}
+.step-more { margin-top: 14px; }
+.step-more > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand);
+  border: 1px solid rgba(31, 181, 116, 0.35);
+  border-radius: 999px;
+  padding: 7px 16px;
+  transition: background .18s ease, border-color .18s ease;
+}
+.step-more > summary::-webkit-details-marker { display: none; }
+.step-more > summary:hover {
+  background: rgba(31, 181, 116, 0.1);
+  border-color: var(--brand);
+}
+.step-more > summary .pm {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+.step-more[open] > summary .pm { transform: rotate(45deg); }
+.step-more[open] > summary .lbl::after { content: " \2014 hide"; }
+.step-detail {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 34px;
+  margin-top: 24px;
+  align-items: start;
+}
+.step-detail .step-text p { color: rgba(245, 245, 242, 0.55); font-size: 15px; }
+.step-detail .step-text p + p { margin-top: 12px; }
+.step-detail .step-text b { color: var(--paper); font-weight: 700; }
+.step-detail .step-diagram { align-self: start; }
+
+@media (max-width: 940px) {
+  .step { grid-template-columns: 60px 1fr; }
+  .step-detail { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 680px) {
+  .steps-sub { font-size: 19px; margin-top: 48px; }
+  .step-short { font-size: 15px; }
+}
+
 </style>
 </head>
 <body>
@@ -1093,25 +1177,25 @@ a { color: inherit; text-decoration: none; }
 </div>
 
 
-<section class="section section-surface" id="what-you-buy">
+<section class="section section-dark" id="product">
   <div class="wrap">
-    <div class="head-center">
-      <span class="kicker">Before you buy</span>
-      <h2>Exactly what you are paying for.</h2>
-      <p>
-        Batch Runner is a paid download. There is no free version, no trial and no
-        free tier. Payment is taken first, then the files are sent to you.
-      </p>
-    </div>
+    <span class="kicker">The product</span>
+    <h2 class="steps-head">What Batch Runner is and what it does.</h2>
+    <p class="steps-lead">
+      Excel changes one input and shows you one answer. Batch Runner runs your whole
+      scenario table through the model and lays every result out beside the assumptions
+      that produced it. One press. Every row calculated, every result recorded, your
+      model put back as it was.
+    </p>
 
-    <div class="buyinfo">
+    <div class="buyinfo buyinfo-dark">
       <div class="buyinfo-card">
-        <span class="kicker">The product</span>
+        <span class="kicker">What it is</span>
         <h3>An Excel add-in with macros</h3>
         <p>
-          Batch Runner for Microsoft Excel is a macro-enabled Excel workbook
-          (<code>.xlsm</code> file) containing a VBA macro. You drop it into your own
-          workbook, or work in the copy provided. It is not a web app and not a service.
+          A macro-enabled Excel workbook (<code>.xlsm</code>) containing a VBA macro.
+          You drop it into your own workbook, or work in the copy provided.
+          It is not a web app and not a service.
         </p>
       </div>
 
@@ -1119,35 +1203,249 @@ a { color: inherit; text-decoration: none; }
         <span class="kicker">What arrives</span>
         <h3>Two files, by email</h3>
         <p>
-          After payment you receive a download link by email containing
-          <b>the tool</b> (<code>Excel_Scenario_Runner.xlsm</code>, approx.&nbsp;190&nbsp;KB)
-          and <b>the user manual</b> (PDF). The .xlsm file contains both Batch Runner and a
-          working example model already wired to it, so the moment you open it you can see
-          how the tool connects to a real Excel model.
+          <b>The tool</b> (<code>Excel_Scenario_Runner.xlsm</code>, approx.&nbsp;190&nbsp;KB)
+          and <b>the manual</b> (PDF). The .xlsm already contains a working example model
+          wired to Batch Runner, so you can see it working the moment you open it.
         </p>
       </div>
 
       <div class="buyinfo-card">
-        <span class="kicker">System requirements</span>
+        <span class="kicker">What you need</span>
         <h3>Windows &amp; Excel 2016 or newer</h3>
         <p>
-          Requires desktop Microsoft Excel on Windows, version 2016 or newer, and macros
-          must be enabled. <b>Not supported</b> on Excel for Mac, Excel on the web, or the
-          Excel mobile apps. Heureka Tools is independent and not affiliated with,
-          endorsed by, or sponsored by Microsoft.
+          Desktop Microsoft Excel on Windows, 2016 or newer, with macros enabled.
+          <b>Not supported</b> on Excel for Mac, Excel on the web, or the mobile apps.
+          Heureka Tools is independent and not affiliated with Microsoft.
         </p>
       </div>
 
       <div class="buyinfo-card">
-        <span class="kicker">Payment &amp; price</span>
+        <span class="kicker">How you get it</span>
         <h3><span class="js-price">€29</span>, paid once</h3>
         <p>
-          A single payment of <span class="js-price">€29</span> including applicable VAT.
-          No subscription and no recurring charges. Payment is processed by
-          <b>Lemon Squeezy</b>, who act as the reseller of record and issue your invoice.
-          Card and PayPal accepted.
+          A paid download — there is no free version, trial or free tier. Payment is taken
+          first, then the files are sent. One payment including VAT, processed by
+          <b>Lemon Squeezy</b> as reseller of record.
         </p>
       </div>
+    </div>
+
+    <figure class="demo-video">
+      <div class="video-frame">
+        <iframe
+          id="demoPlayer"
+          src="https://www.youtube-nocookie.com/embed/JoSK7RkLOto?rel=0&amp;modestbranding=1&amp;enablejsapi=1"
+          title="Batch Runner for Excel — run hundreds of scenarios and Goal Seek in one click"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <figcaption>
+        A full walkthrough on a real model — setup, a batch run, and Goal Seek solving every
+        scenario to its own target. <a href="https://youtu.be/JoSK7RkLOto" target="_blank" rel="noopener">Watch on YouTube</a>
+      </figcaption>
+    </figure>
+
+    <p class="steps-sub">How it works, in five steps</p>
+    <div class="steps">
+      <article class="step">
+        <div class="step-n">01</div>
+        <div class="step-body">
+          <h3>Point at the inputs you want changed</h3>
+          <p class="step-short">Link the cells in your model that should change. Your model itself stays untouched.</p>
+          <details class="step-more">
+            <summary><span class="lbl">Show me how</span><span class="pm">+</span></summary>
+            <div class="step-detail">
+              <div class="step-text">
+                <p>
+            On the control sheet, link to each cell in your model that Batch Runner should
+            drive — type <b>=</b>, click the cell, press Enter. That is the whole setup.
+            Nothing inside your model is edited or rebuilt.
+          </p>
+              </div>
+              <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Control sheet</div>
+            <table>
+              <tbody>
+                <tr><td class="k">Input 1</td><td class="ref">='Model'!$C$5</td></tr>
+                <tr><td class="k">Input 2</td><td class="ref">='Model'!$C$8</td></tr>
+                <tr><td class="k">Input 3</td><td class="ref">='Model'!$C$12</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">… as many as you need · your model untouched</div>
+          </div>
+        </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-n">02</div>
+        <div class="step-body">
+          <h3>Point at the outputs you want read</h3>
+          <p class="step-short">Link the results you want captured. Every link is checked before anything runs.</p>
+          <details class="step-more">
+            <summary><span class="lbl">Show me how</span><span class="pm">+</span></summary>
+            <div class="step-detail">
+              <div class="step-text">
+                <p>
+            The same way, link to the results you care about — IRR, margin, headroom,
+            whatever your model produces. Every link is checked before anything runs, and a
+            broken one is flagged with the reason rather than silently ignored.
+          </p>
+              </div>
+              <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Control sheet · link check</div>
+            <table>
+              <tbody>
+                <tr><td class="k">Output 1</td><td class="ref">='Model'!$B$41</td><td class="num done" style="color:#1fb574">YES</td></tr>
+                <tr><td class="k">Output 2</td><td class="ref">='Model'!$B$42</td><td class="num" style="color:#1fb574">YES</td></tr>
+                <tr><td class="k">Output 3</td><td class="ref">='Mdel'!$B$43</td><td class="num no">NO — sheet</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">broken links are named, never skipped</div>
+          </div>
+        </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-n">03</div>
+        <div class="step-body">
+          <h3>Write your scenarios</h3>
+          <p class="step-short">One row per case. Fill only what changes; blank cells keep your model's own values.</p>
+          <details class="step-more">
+            <summary><span class="lbl">Show me how</span><span class="pm">+</span></summary>
+            <div class="step-detail">
+              <div class="step-text">
+                <p>
+            One row per case, as many as you like. Fill in only the inputs that change from
+            one scenario to the next — anything you leave blank simply keeps whatever your
+            model already has.
+          </p>
+              </div>
+              <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Scenarios</div>
+            <table>
+              <tbody>
+                <tr><td class="k">Input 1</td><td class="num">Input 2</td><td class="num">Input 3</td></tr>
+                <tr><td>27 000</td><td class="num">5.2%</td><td class="num">4.5%</td></tr>
+                <tr><td>25 000</td><td class="num">6.0%</td><td class="num">5.0%</td></tr>
+                <tr><td>27 000</td><td class="num">6.5%</td><td class="num blank">blank</td></tr>
+                <tr><td>31 000</td><td class="num">5.2%</td><td class="num">4.0%</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">blank = your model's own value · unlimited rows</div>
+          </div>
+        </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-n">04</div>
+        <div class="step-body">
+          <h3>Choose how the run works</h3>
+          <p class="step-short">Either read the outputs, or let Goal Seek solve each row to its own target.</p>
+          <details class="step-more">
+            <summary><span class="lbl">Show me how</span><span class="pm">+</span></summary>
+            <div class="step-detail">
+              <div class="step-text">
+                <p>
+            Two options, and Goal Seek is entirely optional. <b>Read the outputs.</b> The
+            model calculates on your inputs and the results are recorded. This is the normal
+            mode.
+          </p>
+          <p>
+            <b>Or solve for a target.</b> Turn Goal Seek on, nominate one output as the
+            target and one input as the variable to move, and give each scenario its own
+            goal. Batch Runner works out what that input has to be, then records the outputs
+            as usual.
+          </p>
+              </div>
+              <div class="step-diagram">
+          <div class="cells-split">
+            <div class="cells">
+              <div class="cells-title">Option · read the outputs</div>
+              <table>
+                <tbody>
+                  <tr><td>your inputs</td></tr>
+                  <tr><td>model calculates</td></tr>
+                  <tr><td class="ref">outputs recorded</td></tr>
+                </tbody>
+              </table>
+              <div class="foot">the normal mode</div>
+            </div>
+            <div class="cells">
+              <div class="cells-title">Option · solve for a target</div>
+              <table>
+                <tbody>
+                  <tr><td>your inputs + a goal</td></tr>
+                  <tr><td>input moved until it hits</td></tr>
+                  <tr><td class="ref">outputs recorded</td></tr>
+                </tbody>
+              </table>
+              <div class="foot">each scenario gets its own goal</div>
+            </div>
+          </div>
+        </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="step-n">05</div>
+        <div class="step-body">
+          <h3>Press run and read the table</h3>
+          <p class="step-short">Results land beside the inputs that produced them, ready to sort and chart.</p>
+          <details class="step-more">
+            <summary><span class="lbl">Show me how</span><span class="pm">+</span></summary>
+            <div class="step-detail">
+              <div class="step-text">
+                <p>
+            Batch Runner works through the scenarios in turn, telling you which one it is
+            on. Results land beside the inputs that produced them, so the finished block
+            sorts, filters and charts like any other range. When the run ends, your model's
+            original inputs are put back.
+          </p>
+              </div>
+              <div class="step-diagram">
+          <div class="cells">
+            <div class="cells-title">Run · scenario 4 of 4 · finished</div>
+            <table>
+              <tbody>
+                <tr><td class="k">27 000 · 5.2%</td><td class="num ref">11.4%</td><td class="num">2.60x</td><td class="num">1.41</td></tr>
+                <tr><td class="k">25 000 · 6.0%</td><td class="num ref">5.9%</td><td class="num">1.92x</td><td class="num">1.13</td></tr>
+                <tr><td class="k">27 000 · 6.5%</td><td class="num ref">8.7%</td><td class="num">2.31x</td><td class="num">1.28</td></tr>
+                <tr><td class="k">31 000 · 5.2%</td><td class="num ref">14.2%</td><td class="num">3.24x</td><td class="num">1.62</td></tr>
+              </tbody>
+            </table>
+            <div class="foot">results sit on the same row as their inputs</div>
+          </div>
+        </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+    </div>
+
+<div class="specs">
+      <div class="spec"><div class="n">30 × 30</div><div class="l">Inputs and outputs per run</div></div>
+      <div class="spec"><div class="n">∞</div><div class="l">Scenario rows, one press</div></div>
+      <div class="spec"><div class="n">Every row</div><div class="l">Gets its own Goal Seek target</div></div>
+      <div class="spec"><div class="n">Zero</div><div class="l">Changes to your model</div></div>
+      <div class="spec"><div class="n">Checked</div><div class="l">Every link, before it runs</div></div>
+      <div class="spec"><div class="n">No code</div><div class="l">Just links between cells</div></div>
     </div>
   </div>
 </section>
@@ -1198,194 +1496,7 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<section class="section section-dark" id="product">
-  <div class="wrap">
-    <span class="kicker">Inside the first tool</span>
-    <h2 class="steps-head">What Batch Runner actually does.</h2>
-    <p class="steps-lead">
-      Excel changes one input and shows you one answer. Batch Runner runs your whole
-      scenario table through the model and lays every result out beside the assumptions
-      that produced it. One press. Every row calculated, every result recorded, your
-      model put back as it was.
-    </p>
 
-    <figure class="demo-video">
-      <div class="video-frame">
-        <iframe
-          id="demoPlayer"
-          src="https://www.youtube-nocookie.com/embed/JoSK7RkLOto?rel=0&amp;modestbranding=1&amp;enablejsapi=1"
-          title="Batch Runner for Excel — run hundreds of scenarios and Goal Seek in one click"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-      </div>
-      <figcaption>
-        A full walkthrough on a real model — setup, a batch run, and Goal Seek solving every
-        scenario to its own target. <a href="https://youtu.be/JoSK7RkLOto" target="_blank" rel="noopener">Watch on YouTube</a>
-      </figcaption>
-    </figure>
-
-    <div class="steps">
-      <article class="step">
-        <div class="step-n">01</div>
-        <div>
-          <h3>Point at the inputs you want changed</h3>
-          <p>
-            On the control sheet, link to each cell in your model that Batch Runner should
-            drive — type <b>=</b>, click the cell, press Enter. That is the whole setup.
-            Nothing inside your model is edited or rebuilt.
-          </p>
-        </div>
-        <div class="step-diagram">
-          <div class="cells">
-            <div class="cells-title">Control sheet</div>
-            <table>
-              <tbody>
-                <tr><td class="k">Input 1</td><td class="ref">='Model'!$C$5</td></tr>
-                <tr><td class="k">Input 2</td><td class="ref">='Model'!$C$8</td></tr>
-                <tr><td class="k">Input 3</td><td class="ref">='Model'!$C$12</td></tr>
-              </tbody>
-            </table>
-            <div class="foot">… as many as you need · your model untouched</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="step">
-        <div class="step-n">02</div>
-        <div>
-          <h3>Point at the outputs you want read</h3>
-          <p>
-            The same way, link to the results you care about — IRR, margin, headroom,
-            whatever your model produces. Every link is checked before anything runs, and a
-            broken one is flagged with the reason rather than silently ignored.
-          </p>
-        </div>
-        <div class="step-diagram">
-          <div class="cells">
-            <div class="cells-title">Control sheet · link check</div>
-            <table>
-              <tbody>
-                <tr><td class="k">Output 1</td><td class="ref">='Model'!$B$41</td><td class="num done" style="color:#1fb574">YES</td></tr>
-                <tr><td class="k">Output 2</td><td class="ref">='Model'!$B$42</td><td class="num" style="color:#1fb574">YES</td></tr>
-                <tr><td class="k">Output 3</td><td class="ref">='Mdel'!$B$43</td><td class="num no">NO — sheet</td></tr>
-              </tbody>
-            </table>
-            <div class="foot">broken links are named, never skipped</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="step">
-        <div class="step-n">03</div>
-        <div>
-          <h3>Write your scenarios</h3>
-          <p>
-            One row per case, as many as you like. Fill in only the inputs that change from
-            one scenario to the next — anything you leave blank simply keeps whatever your
-            model already has.
-          </p>
-        </div>
-        <div class="step-diagram">
-          <div class="cells">
-            <div class="cells-title">Scenarios</div>
-            <table>
-              <tbody>
-                <tr><td class="k">Input 1</td><td class="num">Input 2</td><td class="num">Input 3</td></tr>
-                <tr><td>27 000</td><td class="num">5.2%</td><td class="num">4.5%</td></tr>
-                <tr><td>25 000</td><td class="num">6.0%</td><td class="num">5.0%</td></tr>
-                <tr><td>27 000</td><td class="num">6.5%</td><td class="num blank">blank</td></tr>
-                <tr><td>31 000</td><td class="num">5.2%</td><td class="num">4.0%</td></tr>
-              </tbody>
-            </table>
-            <div class="foot">blank = your model's own value · unlimited rows</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="step">
-        <div class="step-n">04</div>
-        <div>
-          <h3>Choose how the run works</h3>
-          <p>
-            Two options, and Goal Seek is entirely optional. <b>Read the outputs.</b> The
-            model calculates on your inputs and the results are recorded. This is the normal
-            mode.
-          </p>
-          <p>
-            <b>Or solve for a target.</b> Turn Goal Seek on, nominate one output as the
-            target and one input as the variable to move, and give each scenario its own
-            goal. Batch Runner works out what that input has to be, then records the outputs
-            as usual.
-          </p>
-        </div>
-        <div class="step-diagram">
-          <div class="cells-split">
-            <div class="cells">
-              <div class="cells-title">Option · read the outputs</div>
-              <table>
-                <tbody>
-                  <tr><td>your inputs</td></tr>
-                  <tr><td>model calculates</td></tr>
-                  <tr><td class="ref">outputs recorded</td></tr>
-                </tbody>
-              </table>
-              <div class="foot">the normal mode</div>
-            </div>
-            <div class="cells">
-              <div class="cells-title">Option · solve for a target</div>
-              <table>
-                <tbody>
-                  <tr><td>your inputs + a goal</td></tr>
-                  <tr><td>input moved until it hits</td></tr>
-                  <tr><td class="ref">outputs recorded</td></tr>
-                </tbody>
-              </table>
-              <div class="foot">each scenario gets its own goal</div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="step">
-        <div class="step-n">05</div>
-        <div>
-          <h3>Press run and read the table</h3>
-          <p>
-            Batch Runner works through the scenarios in turn, telling you which one it is
-            on. Results land beside the inputs that produced them, so the finished block
-            sorts, filters and charts like any other range. When the run ends, your model's
-            original inputs are put back.
-          </p>
-        </div>
-        <div class="step-diagram">
-          <div class="cells">
-            <div class="cells-title">Run · scenario 4 of 4 · finished</div>
-            <table>
-              <tbody>
-                <tr><td class="k">27 000 · 5.2%</td><td class="num ref">11.4%</td><td class="num">2.60x</td><td class="num">1.41</td></tr>
-                <tr><td class="k">25 000 · 6.0%</td><td class="num ref">5.9%</td><td class="num">1.92x</td><td class="num">1.13</td></tr>
-                <tr><td class="k">27 000 · 6.5%</td><td class="num ref">8.7%</td><td class="num">2.31x</td><td class="num">1.28</td></tr>
-                <tr><td class="k">31 000 · 5.2%</td><td class="num ref">14.2%</td><td class="num">3.24x</td><td class="num">1.62</td></tr>
-              </tbody>
-            </table>
-            <div class="foot">results sit on the same row as their inputs</div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="specs">
-      <div class="spec"><div class="n">30 × 30</div><div class="l">Inputs and outputs per run</div></div>
-      <div class="spec"><div class="n">∞</div><div class="l">Scenario rows, one press</div></div>
-      <div class="spec"><div class="n">Every row</div><div class="l">Gets its own Goal Seek target</div></div>
-      <div class="spec"><div class="n">Zero</div><div class="l">Changes to your model</div></div>
-      <div class="spec"><div class="n">Checked</div><div class="l">Every link, before it runs</div></div>
-      <div class="spec"><div class="n">No code</div><div class="l">Just links between cells</div></div>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="tools">
   <div class="wrap">
@@ -1679,7 +1790,7 @@ a { color: inherit; text-decoration: none; }
       Payments processed by Lemon Squeezy. Not affiliated with Microsoft.
     </span>
     <span class="foot-links">
-      <a href="#what-you-buy">What you buy</a>
+      <a href="#product">What you buy</a>
       <a href="#legal">Terms &amp; privacy</a>
       <a href="#questions">Questions</a>
       <a href="mailto:hello@heurekatools.com">Support</a>
